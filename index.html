@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Sports Game</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+    function App (props) {
+ 
+        return (
+      <div>
+      <button onClick={this.handleTeamOneShots}>Shoot team one!</button>
+      <button onClick={this.handleTeamTwoShots}>Shoot team Two!</button>
+      newScore
+      </div>
+        )
+    } 
+
+
+    class TeamOne extends React.Component{
+        constructor(props){
+            super(props)
+                this.state = {
+                    score:0,
+                    shotsataken:0,
+                    name:thunder,
+                    logo:download.jpeg,
+                }
+
+        }
+        handleTeamOneShots = (event)=>{
+            const newScore = this.state.score + Math.floor((Math.random() * 4))
+        }
+            
+    }
+
+    class TeamTwo extends React.Component{
+        constructor(props){
+            super(props)
+                this.state = {
+                    score:0,
+                    shotsataken:0,
+                    name:bulldogs,
+                    logo:bulldog.jpeg,
+                }
+
+        }
+
+            
+    }
+        
+    
+    
+    
+    ReactDOM.render(
+        <App/>,document.getElementById('root'))
+        
+    
+    
+    </script>
+</body>
+</html>
