@@ -11,49 +11,37 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script type="text/babel">
-    function App (props) {
- 
+  
+  function App (props) {
+            
         return (
-      <div>
-      <button onClick={this.handleTeamOneShots}>Shoot team one!</button>
-      <button onClick={this.handleTeamTwoShots}>Shoot team Two!</button>
-      newScore
-      </div>
-        )
-    } 
+            <div>
+                <button id="Shoot">Shoot</button>
+               <Team name="team one" logo="./download.jpeg"/>
+               <Team name="team two" logo="./bulldog.jpeg"/>
+            </div>
+            
+            )
+        }
 
 
-    class TeamOne extends React.Component{
+    class Team extends React.Component{
         constructor(props){
             super(props)
-                this.state = {
-                    score:0,
-                    shotsataken:0,
-                    name:thunder,
-                    logo:download.jpeg,
-                }
-
-        }
-        handleTeamOneShots = (event)=>{
-            const newScore = this.state.score + Math.floor((Math.random() * 4))
-        }
+            return(
+                <div>
+                    <h3>{this.props.name}</h3>
+                    <img src={this.props.logo} alt="team logo"/>
+                </div>
+                
+                )
             
-    }
-
-    class TeamTwo extends React.Component{
-        constructor(props){
-            super(props)
-                this.state = {
-                    score:0,
-                    shotsataken:0,
-                    name:bulldogs,
-                    logo:bulldog.jpeg,
-                }
-
-        }
-
             
-    }
+            }
+        }
+    
+        
+        
         
     
     
