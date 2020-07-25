@@ -40,27 +40,17 @@
                     score: currentState.score + Math.floor(Math.random() * 4),
                     shotsTaken:currentState.shotsTaken + 1,
                     // audio:currentState.audio.play(),
-                    shotPercent:currentState.shotPercent, 
+                     
                 }
             ))
-            if(this.shotsTaken > 0){
-                
-                this.setState((currentState,props) => {
-                    shotPercent:currentState.shotPercent = currentState.shotsTaken/currentState.score
-                    
-
-
-                }
-                
-                
-                )     
-            }
+           
         }
         handleReset = (event) => {
             this.setState((currentState, props)=>(
                 {
                     score: currentState.score = 0,
                     shotsTaken:currentState.shotsTaken = 0,
+                    resets:currentState.resets + 1
                 }
             ))
         }
@@ -77,10 +67,10 @@
                 <img src={this.props.logo} alt="team logo"/>
                 <button id="Shoot" onClick={this.handleShoot}>Shoot</button>
                 <p>Score: {this.state.score}</p>
-                <p>%:{this.shotPercent}</p>
+                <p>%{this.shotPercent}</p>
                 <p>Shots Taken: {this.state.shotsTaken}</p>
-                <button id="reset" onClick={this.handleReset}>Reset</button>
-                {this.state.Audio}
+                <p><button id="reset" onClick={this.handleReset}>Reset</button>
+                Resets: {this.state.resets}</p>
             </div>
             )
         }
