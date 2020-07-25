@@ -1,44 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React Sports Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="root"></div>
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script type="text/babel">
-  
-  function App (props) {
+
+        class Team extends React.Component{
+    constructor(props){
+        super(props)
+
+        this.state = {
+            score:0,
+            shotsTaken:0,
+            resets:0,
+            // audio:  new Audio('Swish+2.mp3'),
+            shotPercent:0,
+
+           
+            
+
+            
+        }
+    }
+
+    
+        handleShoot = (event) => 
+                {
+            this.setState((currentState, props)=>({       
+                    score: currentState.score + Math.floor(Math.random() * 4),
+                    shotsTaken:currentState.shotsTaken + 1,
+                    // audio:currentState.audio.play(),
+                    shotPercent:currentState.shotPercent, 
+                }
+            ))
+            if(this.shotsTaken > 0){
+                
+                this.setState((currentState,props) => {
+                    shotPercent:currentState.shotPercent = currentState.shotsTaken/currentState.score
+                    
+
+
+                }
+                
+                
+                )     
+            }
+        }
+        handleReset = (event) => {
+            this.setState((currentState, props)=>(
+                {
+                    score: currentState.score = 0,
+                    shotsTaken:currentState.shotsTaken = 0,
+                }
+            ))
+        }
+
+
+    
+
+    
+        render(){
+        
+            return(
+            <div>
+                <h3>{this.props.name}</h3>
+                <img src={this.props.logo} alt="team logo"/>
+                <button id="Shoot" onClick={this.handleShoot}>Shoot</button>
+                <p>Score: {this.state.score}</p>
+                <p>%:{this.shotPercent}</p>
+                <p>Shots Taken: {this.state.shotsTaken}</p>
+                <button id="reset" onClick={this.handleReset}>Reset</button>
+                {this.state.Audio}
+            </div>
+            )
+        }
+    
+    } 
+    
+    
+ 
+function App (props) {
             
         return (
             <div>
-                <button id="Shoot">Shoot</button>
-               <Team name="team one" logo="./download.jpeg"/>
-               <Team name="team two" logo="./bulldog.jpeg"/>
+               <Team name="Home" logo="./download.jpeg"/>
+               <Team name="Visitors" logo="./bulldog.jpeg"/>
             </div>
+        )
             
-            )
+            
         }
+  
 
-
-    class Team extends React.Component{
-        constructor(props){
-            super(props)
-            return(
-                <div>
-                    <h3>{this.props.name}</h3>
-                    <img src={this.props.logo} alt="team logo"/>
-                </div>
-                
-                )
-            
-            
-            }
-        }
+        
     
         
         
@@ -47,10 +111,12 @@
     
     
     ReactDOM.render(
-        <App/>,document.getElementById('root'))
+        <App/>,document.getElementById('root')
+        )
         
     
     
     </script>
 </body>
+
 </html>
