@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React Sports Game</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -13,107 +14,107 @@
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script type="text/babel">
+    <script type="text/babel" src="./main.js">
 
-    class Game extends React.Component{
-            constructor(props){
-                super(props)
+//     class Game extends React.Component{
+//             constructor(props){
+//                 super(props)
                 
 
-        this.state = {
-            venue:'Madison square garden',
-            shotPercent:0,
-            score:0,
-            shotsTaken:0,
-            resets:0,
-            audio:  new Audio('Swish+2.mp3'),
-        } 
+//         this.state = {
+//             venue:'Madison square garden',
+//             shotPercent:0,
+//             score:0,
+//             shotsTaken:0,
+//             resets:0,
+//             audio:  new Audio('Swish+2.mp3'),
+//         } 
        
         
 
-    }
+//     }
 
     
-        handleShoot = (event) => 
-        {  
-            this.setState((currentState, props)=>{      
+//         handleShoot = (event) => 
+//         {  
+//             this.setState((currentState, props)=>{      
                     
-                const shotP = document.querySelector('#shotP')
-                let percent = currentState.shotsTaken/currentState.score 
-                    if(currentState.shotsTaken > 0){
+//                 const shotP = document.querySelector('#shotP')
+//                 let percent = currentState.shotsTaken/currentState.score 
+//                     if(currentState.shotsTaken > 0){
                         
-                        shotP.innerHTML = percent
+//                         shotP.innerHTML = percent
 
                     
                     
                     
 
-                    }
-                    return{ 
-                    score: currentState.score + Math.floor(Math.random() * 4),
-                    shotsTaken:currentState.shotsTaken + 1,
-                    // audio:currentState.audio.play(),
-                    shotPercent:percent 
+//                     }
+//                     return{ 
+//                     score: currentState.score + Math.floor(Math.random() * 4),
+//                     shotsTaken:currentState.shotsTaken + 1,
+//                     audio:currentState.audio.play(),
+//                     shotPercent:percent 
                   
                      
-                 }
+//                  }
                  
-                }
-            )
+//                 }
+//             )
              
-        }
-        handleReset = (event) => {
+//         }
+//         handleReset = (event) => {
              
             
-            this.setState((currentState, props)=> ({
+//             this.setState((currentState, props)=> ({
                 
-                score: currentState.score = 0,
-                shotsTaken:currentState.shotsTaken = 0,
-                resets:currentState.resets + 1,
-                shotPercent:currentState.shotPercent  = 0
+//                 score: currentState.score = 0,
+//                 shotsTaken:currentState.shotsTaken = 0,
+//                 resets:currentState.resets + 1,
+//                 shotPercent:currentState.shotPercent  = 0
                 
-            }
-            ))
+//             }
+//             ))
             
             
-        }
+//         }
 
     
 
     
-        render(){
+//         render(){
         
-        return(
-            <div id='teamDiv'>
-                <h1>Welcome to {this.props.venue}!</h1>
-                <h3>{this.props.name}</h3>
-                <img src={this.props.logo} alt="team logo"/>
-                <button id="Shoot" onClick={this.handleShoot}>Shoot</button>
-                <p>Score: {this.state.score}</p>
-                <p>shotsTaken: {this.state.shotsTaken}</p>
-                <p id="shotP"></p>
-                <p><button id="reset" onClick={this.handleReset}>Reset</button>
-                Resets: {this.state.resets}</p>
+//         return(
+//             <div id='teamDiv'>
+//                 <h1>Welcome to {this.props.venue}!</h1>
+//                 <h3>{this.props.name}</h3>
+//                 <img src={this.props.logo} alt="team logo"/>
+//                 <button id="Shoot" onClick={this.handleShoot}>Shoot</button>
+//                 <p>Score: {this.state.score}</p>
+//                 <p>shotsTaken: {this.state.shotsTaken}</p>
+//                 <p id="shotP"></p>
+//                 <p><button id="reset" onClick={this.handleReset}>Reset</button>
+//                 Resets: {this.state.resets}</p>
                 
-            </div>
-            )
-        }
+//             </div>
+//             )
+//         }
     
-} 
+// } 
     
     
  
-function App (props) {
+// function App (props) {
             
-        return (
-            <div>
-               <Game venue ="Madison square Garden" name="Home" logo="./download.jpeg"/>
-               <Game name="Visitors" logo="./bulldog.jpeg"/>
-            </div>
-        )
+//         return (
+//             <div>
+//                <Game venue ="Madison square Garden" name="Home" logo="./download.jpeg"/>
+//                <Game name="Visitors" logo="./bulldog.jpeg"/>
+//             </div>
+//         )
             
             
-}
+// }
   
 
         
@@ -124,9 +125,9 @@ function App (props) {
     
     
     
-    ReactDOM.render(
-        <App/>,document.getElementById('root')
-        )
+//     ReactDOM.render(
+//         <App/>,document.getElementById('root')
+//         )
         
     
     
