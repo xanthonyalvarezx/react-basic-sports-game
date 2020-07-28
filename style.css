@@ -249,7 +249,7 @@ and (min-width : 800px) {
     }
     h1{
         position: relative;
-        top: -200px;
+        top: -10px;
         font-size: 26px;
         
     
