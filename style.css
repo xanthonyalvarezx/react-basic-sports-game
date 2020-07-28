@@ -8,6 +8,7 @@ body{
     
     justify-content: center;
     text-shadow: 2px 2px 8px  tomato;
+    background-color:grey;
 
 }
 
@@ -58,4 +59,284 @@ h1{
     top: 5px;
 
 }
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 361px) {
+    *{box-sizing: border-box;
+        font-family: 'Permanent Marker', cursive;
+    
+    }
+    
+    body{
+        display: flex;
+        
+        justify-content: center;
+        text-shadow: 2px 2px 8px  tomato;
+        background-color:grey;
+    
+    }
+    
+    img{
+        width: 200px;
+        box-shadow: 1px 1px 10px 10px rgba(227, 66, 66, 0.662);
+        margin:20px;
+    }
+    .Game{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+       
+    }
+    .shotDiv{
+        padding: 50px;
+    }
+    .scoreBoard{
+        display: flex;
+        position: relative;
+        top:578px;
+        left:-75px;
+        
+        
+        width: 300px;
+        height: 100px;
+        font-size: 12px;
+    }
+    h1{
+        position: relative;
+        bottom: 10px;
+        font-size: 26px;
+        
+    
+    }
+    .versus{
+    
+        position: relative;
+        top:-20px;
+        left: 175px;
+        margin-top:-40px;
+    }
+    .resetButton{
+        position: relative;
+        left: 25px;
+        top: -10px;
+    
+    }
+}
+
+
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+    @media only screen 
+    and (min-width : 361px) {
+        *{box-sizing: border-box;
+            font-family: 'Permanent Marker', cursive;
+        
+        }
+        
+        body{
+            display: flex;
+            
+            justify-content: center;
+            text-shadow: 2px 2px 8px  tomato;
+            background-color:grey;
+        
+        }
+        
+        img{
+            width: 200px;
+            box-shadow: 1px 1px 10px 10px rgba(227, 66, 66, 0.662);
+            margin:20px;
+        }
+        .Game{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            
+           
+        }
+        .shotDiv{
+            padding: 50px;
+        }
+        .scoreBoard{
+            display: flex;
+            position: relative;
+            top:578px;
+            left:-75px;
+            
+            
+            width: 300px;
+            height: 100px;
+            font-size: 12px;
+        }
+        h1{
+            position: relative;
+            bottom: 10px;
+            font-size: 26px;
+            
+        
+        }
+        .versus{
+        
+            position: relative;
+            top:-10px;
+            left: 225px;
+            margin-top:-40px;
+        }
+        .resetButton{
+            position: relative;
+            left: 25px;
+            top: -10px;
+        }
+    }
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    *{box-sizing: border-box;
+        font-family: 'Permanent Marker', cursive;
+    
+    }
+    
+    body{
+        display: flex;
+        
+        justify-content: center;
+        text-shadow: 2px 2px 8px  tomato;
+        background-color:grey;
+    
+    }
+    
+    img{
+        width: 200px;
+        box-shadow: 1px 1px 10px 10px rgba(227, 66, 66, 0.662);
+        margin:20px;
+    }
+    .Game{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+       
+    }
+    .shotDiv{
+        padding: 50px;
+    }
+    .scoreBoard{
+        display: flex;
+        position: relative;
+        top:578px;
+        left:-75px;
+        
+        
+        width: 300px;
+        height: 100px;
+        font-size: 12px;
+    }
+    h1{
+        position: relative;
+        top: -200px;
+        font-size: 26px;
+        
+    
+    }
+    .versus{
+    
+        position: relative;
+        top:-10px;
+        left: 225px;
+        margin-top:-40px;
+    }
+    .resetButton{
+        position: relative;
+        left: 25px;
+        top: -10px;
+        
+    
+    }
+}
+
+
+
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+    *{box-sizing: border-box;
+        font-family: 'Permanent Marker', cursive;
+    
+    }
+    
+    body{
+        display: flex;
+        
+        justify-content: center;
+        text-shadow: 2px 2px 8px  tomato;
+        background-color:grey;
+    
+    }
+    
+    img{
+        width: 200px;
+        box-shadow: 1px 1px 10px 10px rgba(227, 66, 66, 0.662);
+        margin:20px;
+    }
+    .Game{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+       
+    }
+    .shotDiv{
+        padding: 50px;
+    }
+    .scoreBoard{
+        display: flex;
+        position: relative;
+        top:578px;
+        left:-75px;
+        
+        
+        width: 300px;
+        height: 100px;
+        font-size: 12px;
+    }
+    h1{
+        position: relative;
+        bottom: 100px;
+        font-size: 26px;
+        
+    
+    }
+    .versus{
+    
+        position: relative;
+        top:-10px;
+        left: 225px;
+        margin-top:-40px;
+    }
+    .resetButton{
+        position: relative;
+        left: 25px;
+        top: -10px;
+        
+    
+    }
 }
