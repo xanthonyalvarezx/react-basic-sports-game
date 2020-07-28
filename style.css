@@ -204,7 +204,7 @@ and (max-device-width : 1024px) {
 
 /* Desktops and laptops ----------- */
 @media only screen 
-and (min-width : 1224px) {
+and (min-width : 800px) {
     *{box-sizing: border-box;
         font-family: 'Permanent Marker', cursive;
     
