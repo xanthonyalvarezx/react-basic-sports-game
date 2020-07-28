@@ -273,9 +273,9 @@ and (min-width : 800px) {
 
 
 
-/* Large screens ----------- */
+/* Large screens -----------
 @media only screen 
-and (min-width : 1824px) {
+and (min-width : 900px) {
     *{box-sizing: border-box;
         font-family: 'Permanent Marker', cursive;
     
@@ -286,7 +286,7 @@ and (min-width : 1824px) {
         
         justify-content: center;
         text-shadow: 2px 2px 8px  tomato;
-        background-color:grey;
+        background-color:red;
     
     }
     
@@ -339,4 +339,4 @@ and (min-width : 1824px) {
         
     
     }
-}
+} */
