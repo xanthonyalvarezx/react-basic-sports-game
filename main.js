@@ -133,8 +133,8 @@ return(
        shotHandler={() => this.handleShoot('home')}
        />
         <div className='resetButton'>
-           <strong>Resets:</strong> {this.state.resetCount}
-           <button onClick ={this.resetGame}>Reset Game</button>
+           <strong>Resets:</strong> {this.state.resetCount} <br/>
+            <button onClick ={this.resetGame}>Reset Game</button>
        </div>
        <div className='versus'><h1>VS</h1></div>
        
